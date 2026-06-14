@@ -73,6 +73,8 @@ docs/_build/
 
 data/
 embeddings/
+arxiv.zip
+arxiv-metadata-oai-snapshot.json
 
 
 # PyBuilder
