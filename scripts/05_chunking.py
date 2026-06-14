@@ -124,9 +124,9 @@ def prepare_point_objects(top_30_data_list, chunking_strategy_name: str):
 
         # select chunking strategy
         if chunking_strategy_name == "fixed":
-            chunks = fixed_size_chunking(abstract, chunk_size=200, chunk_overlap=50)
+            chunks = fixed_size_chunking(abstract, chunk_size=150, chunk_overlap=50)
         else:
-            chunks = semantic_chunking(abstract, model=model, threshold=0.7, min_chunk_size=50, max_chunk_size=200)
+            chunks = semantic_chunking(abstract, model=model, threshold=0.7, min_chunk_size=50, max_chunk_size=150)
 
         for chunk_num, chunk_text in enumerate(chunks):
             chunk_id = f"{chunking_strategy_name}_chunk_{arxiv_id}_{chunk_num}"            
